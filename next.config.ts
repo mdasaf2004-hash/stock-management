@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    middlewarePrefetch: 'flexible',
+  outputFileTracingExcludes: {
+    '/middleware': ['**/*.nft.json'],
   },
 };
 

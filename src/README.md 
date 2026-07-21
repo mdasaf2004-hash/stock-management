@@ -1,0 +1,45 @@
+# Multi-Warehouse Stock Management Application
+
+A modern, full-stack enterprise resource planning (ERP) system designed for materials-to-wholesaler trading businesses. This application provides full auditability of cross-warehouse inventory, automated safety-reorder alerts, B2B client credit tracking, and transactional sales lifecycle management with atomic stock deduction safety.
+
+## 🚀 Core Features
+
+*   **Multi-Warehouse Inventory Tracking:** Real-time visibility into stock metrics, specific volumetric storage capabilities, and spatial availability distributed across multiple physical fulfillment hubs[cite: 1, 1].
+*   **Master SKU Catalog:** Complete product registry managing explicit Stock Keeping Units (SKUs), measurement units, exact pricing metrics, and automated minimum reorder thresholds[cite: 1, 1].
+*   **B2B Wholesaler CRM:** Client accounts management featuring structured records of business tax details, contact vectors, and credit lines[cite: 1, 1].
+*   **Transactional Order Pipeline:** Multi-step order compilation flow that links customers, dispatch facilities, and specific line items[cite: 1, 1].
+*   **Atomic Stock Guarantees:** Order confirmations process through strict database transaction blocks (`prisma.$transaction`)—ensuring concurrent stock counts remain synchronized, under-ordering limits trip properly, and partial operations roll back automatically on asset shortfalls[cite: 1, 1].
+*   **Immutable Operations Ledger:** Comprehensive audit trails detailing historical inbound receptions, outbound shipments, inter-facility stock adjustments, and manual correction footprints[cite: 1, 1].
+*   **Operational Insights Analytics:** Interactive dashboard highlighting cumulative inventory valuation, active sales queues, and automated shortage flags[cite: 1, 1].
+*   **Role-Based Access Controls (RBAC):** Gated access profiles separating foundational operational capabilities across `ADMIN`, `WAREHOUSE_MANAGER`, and `SALES` organizational roles[cite: 1, 1].
+
+---
+
+## 🛠️ Tech Stack
+
+| Operational Layer | Framework Choice | Description |
+| :--- | :--- | :--- |
+| **Frontend Layout** | Next.js 14 (App Router) | React Server Components for zero-latency direct-to-database layout fetches[cite: 1, 1]. |
+| **Language Profile** | TypeScript | Strong typing guarantees across component properties, DB models, and API interfaces. |
+| **Styling Engine** | Tailwind CSS + shadcn/ui | Radix UI accessible, unstyled foundation primitives styled elegantly via Tailwind primitives[cite: 1, 1]. |
+| **Database Tier** | PostgreSQL 16 | Relational performance with explicit multi-table primary/foreign constraint links[cite: 1, 1]. |
+| **Data Access Client**| Prisma ORM | Deep type-safe query generation, native validation support, and structural migration management[cite: 1, 1]. |
+| **Authentication** | NextAuth.js (Credentials Provider) | Internal user authentication with secure bcrypt hashing and JSON Web Token (JWT) role storage[cite: 1, 1]. |
+| **Form Management**  | React Hook Form + Zod | Client-side tracking backed by strict, structural schema validators. |
+| **State & Fetching**  | TanStack Query (React Query) | High-performance cache controls, background synchronization, and reactive local updates. |
+
+---
+
+## 💻 Local Environment Setup
+
+### Prerequisites
+*   Operating System: **Fedora Linux (KDE Plasma)** or any modern POSIX environment.
+*   **Node.js LTS** (v20+ managed cleanly via NVM).
+*   **PostgreSQL 16** server daemon initialized and active locally.
+
+### 1. Repository Preparation & Dependencies
+Clone down the source distribution package files and install the required internal dependency modules:
+```bash
+git clone git@github.com:yourusername/stock-management.git
+cd stock-management
+npm install

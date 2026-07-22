@@ -4,9 +4,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  outputFileTracingExcludes: {
-    '/middleware': ['**/*.nft.json'],
-  },
 };
 
 export default nextConfig;

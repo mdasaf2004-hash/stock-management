@@ -28,6 +28,7 @@ export async function POST(req: Request) {
       );
     }
 
+    const userCount = await prisma.user.count();
     const hashedPassword = await bcrypt.hash(password, 12);
 
     const user = await prisma.user.create({
@@ -35,7 +36,7 @@ export async function POST(req: Request) {
         name,
         email,
         password: hashedPassword,
-        role: "USER",
+        role: userCount === 0 ? "ADMIN" : "USER",
       },
     });
 
